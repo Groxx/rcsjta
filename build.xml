@@ -42,8 +42,6 @@
 			<fileset dir="${stack.root}" includes="NOTICE.txt" />
 			<zipfileset dir="${api.root}/build/outputs/aar" includes="*debug.aar"
 				fullpath="api/rcs_api.aar" />
-			<zipfileset dir="${ri.root}/libs/armeabi"
-				includes="lib*.so" prefix="api/codecs" />
 			<zipfileset dir="${javadoc.root}" prefix="api/javadoc" />
 			<zipfileset dir="${template.root}/build/outputs/apk" includes="*debug.apk"
 				fullpath="tools/RCS_template.apk" />
