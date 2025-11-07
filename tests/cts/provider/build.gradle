@@ -16,7 +16,7 @@ android {
 
 dependencies {
     // Testing-only dependencies
-    androidTestCompile 'com.android.support.test:runner:0.4.1'
-    androidTestCompile 'com.android.support.test:rules:0.4.1'
-	compile project(':api')
+    androidTestImplementation 'com.android.support.test:runner:0.4.1'
+    androidTestImplementation 'com.android.support.test:rules:0.4.1'
+    implementation project(':api')
 }
