@@ -1,8 +1,17 @@
 apply plugin: 'com.android.library'
 
 android {
+    namespace 'com.gsma.services.rcs'
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            aidl.srcDirs = ['src/main/aidl']
+        }
+    }
 
     lintOptions {
         abortOnError false
@@ -17,6 +26,10 @@ android {
     defaultConfig {
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
+    }
+
+    buildFeatures {
+        aidl true
     }
 }
 

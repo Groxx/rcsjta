@@ -1,8 +1,15 @@
 apply plugin: 'com.android.library'
 
 android {
+    namespace 'com.gsma.rcs.api.connection'
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+        }
+    }
 
     lintOptions {
         abortOnError false

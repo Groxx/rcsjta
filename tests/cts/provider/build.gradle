@@ -1,8 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace 'android.tests.provider'
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+        }
+    }
 
     defaultConfig {
         applicationId "android.tests.provider"
